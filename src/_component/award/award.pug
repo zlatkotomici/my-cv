@@ -1,5 +1,36 @@
 -
   var awardHeader = '#awards'
+  var awardList = [
+    {
+      title: 'Big Prize',
+      description: 'something',
+      location: 'Campus-London',
+      date: '2018'
+    },
+    {
+      title: 'Surprise',
+      description: 'something',
+      location: 'London-Stratford',
+      date: '2019'
+    }
+  ];
 #award 
 .award
   .award_header=awardHeader
+  each award in awardList
+    .award__card
+      .award__icon 
+        span.my-cv__icon--trophy
+      .award__title=award.title
+
+      .award__icon 
+        span.my-cv__icon--info
+      .award__description=award.description
+
+      .award__icon 
+        span.my-cv__icon--map2
+      .award__location=award.location
+
+      .award__icon 
+        span.my-cv__icon--calendar
+      .award__date=award.date
